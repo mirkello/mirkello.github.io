@@ -39,30 +39,42 @@ button{
 
 <script>
 const sostantivi = [
-"Palinsesto",
-"Crisalide",
-"Aporia",
-"Vestigio",
-"Interstizio",
-"Filigrana",
-"Reliquia",
-"Reminiscenza",
-"Penombra",
-"Catabasi",
-"Lacuna",
-"Simulacro"
-];
+    "Palinsesto",
+    "Crisalide",
+    "Aporia",
+    "Vestigio",
+    "Interstizio",
+    "Filigrana",
+    "Reliquia",
+    "Reminiscenza",
+    "Penombra",
+    "Catabasi",
+    "Lacuna",
+    "Simulacro"
+    ];
+
+const verbi = [
+    "essere",
+    "chiamarsi",
+    "divenire",
+    "scordarsi",
+    "toccare",
+    "annusare"
+    ];
 
 const nomi = [
-"Ernesto"
-];
+    "Ernesto",
+    "Mirko",
+    "Elena"
+    ];
 
 function genera() {
     const s = sostantivi[Math.floor(Math.random()*sostantivi.length)];
     const n = nomi[Math.floor(Math.random()*nomi.length)];
+    const v = verbi[Math.floor(Math.random()*verbi.lenght)]
 
     document.getElementById("titolo").innerText =
-        `${s} di chiamarsi ${n}`;
+        `${s} di ${v} ${n}`;
 }
 </script>
 
