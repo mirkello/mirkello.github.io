@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Generatore di Titoli</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Georgia, serif;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+h1{
+    text-align:center;
+    max-width:800px;
+    padding:20px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="titolo">Premi il pulsante</h1>
+
+<button onclick="genera()">Genera titolo</button>
+
+<script>
+const sostantivi = [
+"Palinsesto",
+"Crisalide",
+"Aporia",
+"Vestigio",
+"Interstizio",
+"Filigrana",
+"Reliquia",
+"Reminiscenza",
+"Penombra",
+"Catabasi",
+"Lacuna",
+"Simulacro"
+];
+
+const nomi = [
+"Mirko",
+"Marco",
+"Giulia",
+"Elena",
+"Andrea",
+"Lorenzo"
+];
+
+function genera() {
+    const s = sostantivi[Math.floor(Math.random()*sostantivi.length)];
+    const n = nomi[Math.floor(Math.random()*nomi.length)];
+
+    document.getElementById("titolo").innerText =
+        `${s} di chiamarsi ${n}`;
+}
+</script>
+
+</body>
+</html>
